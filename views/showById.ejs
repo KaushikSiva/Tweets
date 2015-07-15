@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+   <head>
+     <title>Show By Id</title>
+     <link href='/styles.css' rel="stylesheet">
+     <link href='//ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css' rel="stylesheet">
+  </head>
+  <body>
+	 <h1 id="main-title">Rendering with React</h1>
+     <br/>
+     <br/>
+     <br/>
+      <table class="table table-striped table-bordered">
+       <tr>
+         <td> Id </td>
+         <td> Tweet </td>
+         <td> CreatedAt </td>
+         <td> UserId </td>
+         <td> PersonName </td>
+         <td> ProfileImage </td>
+         <td> Location </td>
+       </tr>
+        <% for(var i=0; i < tweetsResp.length; i++) { %>
+        <tr>
+         <td><%= tweetsResp[i].id %></td>
+         <td><%= tweetsResp[i].text %></td>
+         <td><%= tweetsResp[i].created_at %></td>
+         <td><%= tweetsResp[i].user_id %></td>
+         <td><%= peopleResp[0].screen_name %></td>
+         <td><%= peopleResp[0].profile_image_url %></td>
+         <td><%= peopleResp[0].location %></td>
+        </tr>
+        <% } %>
+      </table>
+      <br/>
+      <br/>
+      <br/>
+      <form action="/"" method ="get">
+         <input type="submit" class="btn btn-primary btn-lg active" value="Back">
+      </form>
+   </body>
+</html>

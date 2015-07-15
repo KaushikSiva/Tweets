@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tweets with NodeJS</title>
+    <link href='/styles.css' rel="stylesheet">
+    <link href='//ajax.aspnetcdn.com/ajax/bootstrap/3.3.2/css/bootstrap.min.css' rel="stylesheet">
+  </head>
+  <body>
+	<h1 id="main-title">Tweets with NodeJS</h1>
+
+    <div id="react-main-mount">
+      <%- reactOutput %>
+    </div>    
+    <br/>
+    <br/>
+    <br/>
+    <form action="/tweetsById" method ="post">
+        PersonId:  <input type="text" id="input" name="id">
+    <input type="submit" value="Search His/Her Tweets!" class="btn btn-success">
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <form action="/gettweets" method ="get">
+        <input type="submit" value="Get TweetsFor A Minute" class="btn btn-primary btn-lg active">
+    </form>
+     <script src="/main.js"></script>
+   </body>
+</html>
