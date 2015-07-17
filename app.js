@@ -118,7 +118,8 @@ function buildResponse(json,res,ind)
                 tweetsResp: response.tweets,
                 peopleResp : response.persons
             });
-            
+       response.tweets = [];
+       response.persons = []
     }
 }
 //show All tweets on Loading Page and calls RenderTwets as callback
